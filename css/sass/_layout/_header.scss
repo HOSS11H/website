@@ -1,0 +1,210 @@
+/* Header*/
+header{
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    background-color:#fff;
+    //border-bottom: 1px solid #eaeaea;
+    &.sticky{
+        box-shadow: 1px 2px 4px 5px #0000003d;
+        animation: slideDown 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .wrapper{
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            a{
+                font-size: 26px;
+                //color: $mainColor;
+                color: #000;
+            }
+        }
+        .show-menu-btn{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            @media screen and (min-width:992px) {
+                display: none;
+            }
+            &:hover{
+                span{
+                    &::before{
+                        width: 100%
+                    }
+                    &::after{
+                        width: 100%
+                    }
+                }
+            }
+            
+            span{
+                width: 100%;
+                height: 4px;
+                background-color: #000;
+                border-radius: 8px;
+                position: relative;
+                transition: 0.3s ease-in-out;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    right: 0;
+                    width: 50%;
+                    height: 4px;
+                    background-color: #000;
+                    border-radius: 8px;
+                    transition: 0.3s ease-in-out;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    width: 50%;
+                    height: 4px;
+                    background-color: #000;
+                    border-radius: 8px;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+        .hide-menu-btn{
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            @media #{$minLarge} {
+                display: none;
+            }
+            &:hover{
+                color:$mainColor;
+            }
+        }
+        nav{
+            @media screen and (max-width:991.98px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #000;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                z-index: 4;
+                visibility:hidden;
+                opacity: 0;
+                &.active{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .links{
+                    text-align: center;
+                    li{
+                        display: block;
+                        padding:10px 0;
+                        a{
+                            display: inline-block;
+                            padding: 10px 0;
+                            font-size: 24px;
+                            text-transform: capitalize;
+                            text-decoration: none;
+                            color: #fff;
+                            transition: 0.5s ease-in-out;
+                            position: relative;
+                        &:hover{
+                            color: $mainColor;
+                            &::after{
+                                width:100%
+                            }
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 0;
+                            height: 1px;
+                            background: $mainColor;
+                            transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            @media screen and (min-width:992px) {
+                display: flex;
+                align-items: center;
+                .links{
+                    margin-right: 30px;
+                    li{
+                        display: inline-block;
+                        margin-right: 30px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        a{
+                            display: inline-flex;
+                            align-items: center;
+                            height: 40px;
+                            font-family: $font-body;
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 24px;
+                            //color: $mainColor;
+                            color: #000;
+                            text-transform: capitalize;
+                            position: relative;
+                            &:hover{
+                                &::after{
+                                    width: 100%;
+                                }
+                            }
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                height: 50%;
+                                width: 0;
+                                transition: 0.3s ease-in-out;
+                                background-color: rgba($mainColor,0.3) ;
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .progress{
+        width: 100%;
+        height: 5px;
+        background: white;
+        z-index: 1;
+        .bar{
+            height: 100%;
+            width: 10%;
+            background: $mainColor;
+            transition:0.5s ease-in-out;
+        }
+    }
+}
+/*HEADER */

@@ -1,0 +1,150 @@
+/*global Rules*/
+html{
+    scroll-behavior: smooth;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+    cursor: none;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+  @for $i from 1 through 6 {
+    h#{$i}{
+        text-transform: capitalize;
+        margin: 0;
+    }
+  }
+  p{
+    margin: 0;
+  }
+  .list-unstyled{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    &:hover,&:focus{
+        text-decoration: none;
+    }
+  }
+  .item-clickable{
+    position:relative;
+  }
+  .clickable{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+  }
+  .ratio-container{
+    position: relative;
+    .ratio-content{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        width: 100%;
+        height:100%;
+        img{
+          max-width: 100%;
+        }
+    }
+  }
+  .black-bold{
+    color:#000;
+    font-weight: bold;
+  }
+  .section-heading{
+    margin-bottom: 45px;
+    .section-pre-title{
+      letter-spacing: 16px;
+      font-size: 18px;
+      color:$mainColor;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 20px;
+      @media #{$maxSmall}{
+        font-size:16px
+      }
+    }
+    .section-title{
+      font-size: 42px;
+      color: #000;
+      font-weight: bold;
+      @media #{$maxSmall}{
+        font-size:32px
+      }
+    }
+  }
+  
+  .paragraph{
+    color:#999
+  }
+  /* Cursor */ 
+  .cursor {
+    
+    .cursor__inner {
+      z-index: 9999;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      mix-blend-mode: difference;
+      border-radius: 50%;
+      &.cursor__inner--dot {
+        width: 6px;
+        height: 6px;
+        background: #fff;
+      }
+      
+      &.cursor__inner--circle {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #fff;
+      }
+    }
+  }
+  /* Cursor */
+
+  /*global Rules*/
+  
+  /*Slider Reset*/
+  /*Style The Slider*/
+  
+  /*Slider Reset*/
+  
+  /*Form Reset*/
+  
+  
+  /*Form Reset*/
+  
+  /* Animation */
+  @include keyFrame(upDown) {
+    0% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 40px;
+    }
+    100% {
+        bottom: 30px;
+    }
+  }
+@include keyFrame(slideDown) {
+  0% {
+      transform: translateY(-120px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+  /* Animation */

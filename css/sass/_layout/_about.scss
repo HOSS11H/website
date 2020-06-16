@@ -1,0 +1,44 @@
+.about{
+    .top{
+        svg{
+            vertical-align: middle;
+            
+        }
+    }
+    .center{
+        background-color: $mainColor;
+        @media #{$maxTablet} {
+            padding: 25px 0;
+        }
+        .avatar{
+            border-radius: 50%;
+            border: 10px solid #fff;
+            overflow: hidden;
+            max-width: 370px;
+            height: 370px;
+            @media #{$maxTablet} {
+                margin: 0 auto 70px;
+            }
+            img{
+                max-width: 100%;
+            }
+        }
+        .presentation{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 18px;
+                line-height: 1.5;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #fff;
+                text-transform: capitalize;
+                @media #{$maxTablet} {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

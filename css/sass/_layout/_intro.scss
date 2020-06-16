@@ -1,0 +1,82 @@
+.intro{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    text-align: center;
+    @media #{$minLarge} {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: left;
+    }
+    .info{
+        margin-bottom: 50px;
+        @media screen and (min-width: 992px) {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+        .pre-name{
+            font-size: 26px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: $mainColor;
+            //color: #808080db;
+            //font-weight: 600;
+            text-transform: capitalize;
+        }
+        .name{
+            font-size: 47px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: $mainColor;
+            text-transform: capitalize;
+        }
+        .desc{
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 20px;
+            color: $colorBody;
+            padding-top: 12px;
+            text-transform: capitalize;
+            margin-bottom: 45px;
+            @media #{$minLarge} {
+                margin-bottom: 27px;
+            }
+            span{
+                font-weight: bold;
+            }
+        }
+        .btn{
+            @media #{$maxTablet} {
+                margin: 0 auto;
+            }
+        }
+    }
+    .mockup{
+        svg{
+            max-width: 100%;
+        }
+    }
+    .more{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        bottom: 30px;
+        width: 15px;
+        height: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: transparent $mainColor $mainColor transparent;
+        transition: 0.5s;
+        cursor: pointer;
+        animation: upDown 2s infinite ease-in-out;
+    }
+    
+}
