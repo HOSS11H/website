@@ -94,103 +94,105 @@ header{
             }
         }
         nav{
-            @media screen and (max-width:991.98px) {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background: #000;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: 0.5s;
-                z-index: 4;
-                visibility:hidden;
-                opacity: 0;
-                &.active{
-                    visibility: visible;
-                    opacity: 1;
-                }
-                .links{
-                    text-align: center;
-                    li{
-                        display: block;
-                        padding:10px 0;
-                        a{
-                            display: inline-block;
-                            padding: 10px 0;
-                            font-size: 24px;
-                            text-transform: capitalize;
-                            text-decoration: none;
-                            color: #fff;
-                            transition: 0.5s ease-in-out;
-                            position: relative;
+            display: flex;
+            align-items: center;
+            .links{
+                margin-right: 30px;
+                li{
+                    display: inline-block;
+                    margin-right: 30px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    a{
+                        display: inline-flex;
+                        align-items: center;
+                        height: 40px;
+                        font-family: $font-body;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 24px;
+                        //color: $mainColor;
+                        color: #000;
+                        text-transform: capitalize;
+                        position: relative;
                         &:hover{
-                            color: $mainColor;
                             &::after{
-                                width:100%
+                                width: 100%;
                             }
                         }
-                        &::after{
+                        &:after{
                             content: '';
                             position: absolute;
                             bottom: 0;
-                            left: 50%;
-                            transform: translateX(-50%);
+                            left: 0;
+                            height: 50%;
                             width: 0;
-                            height: 1px;
-                            background: $mainColor;
-                            transition: 0.5s;
-                            }
+                            transition: 0.3s ease-in-out;
+                            background-color: rgba($mainColor,0.3) ;
                         }
+                        
                     }
                 }
-                
             }
-            @media screen and (min-width:992px) {
-                display: flex;
-                align-items: center;
-                .links{
-                    margin-right: 30px;
-                    li{
+            @media #{$maxTablet} {
+                display: none;
+            }
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            z-index: 4;
+            visibility:hidden;
+            opacity: 0;
+            &.active{
+                visibility: visible;
+                opacity: 1;
+            }
+            .links{
+                text-align: center;
+                li{
+                    display: block;
+                    padding:10px 0;
+                    a{
                         display: inline-block;
-                        margin-right: 30px;
-                        &:last-child{
-                            margin-right: 0;
+                        padding: 10px 0;
+                        font-size: 24px;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                        color: #fff;
+                        transition: 0.5s ease-in-out;
+                        position: relative;
+                    &:hover{
+                        color: $mainColor;
+                        &::after{
+                            width:100%
                         }
-                        a{
-                            display: inline-flex;
-                            align-items: center;
-                            height: 40px;
-                            font-family: $font-body;
-                            font-weight: bold;
-                            font-size: 15px;
-                            line-height: 24px;
-                            //color: $mainColor;
-                            color: #000;
-                            text-transform: capitalize;
-                            position: relative;
-                            &:hover{
-                                &::after{
-                                    width: 100%;
-                                }
-                            }
-                            &:after{
-                                content: '';
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                                height: 50%;
-                                width: 0;
-                                transition: 0.3s ease-in-out;
-                                background-color: rgba($mainColor,0.3) ;
-                            }
-                            
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 1px;
+                        background: $mainColor;
+                        transition: 0.5s;
                         }
                     }
                 }
-                
+            }
+            @media #{$minLarge} {
+                display: none;
             }
         }
     }

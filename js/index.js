@@ -6,31 +6,31 @@ $(document).ready(function () {
         var hideMenu = $(".hide-menu-btn i");
 
         showMenu.click(function () {    //Show Menu On Click
-            $("nav").addClass('active');
+            $(".mobile-menu").addClass('active');
             toggleTween(tl);    //We add the function To play on click
         });
 
         hideMenu.click(function () {       //Hide Menu On Click
-            $("nav").removeClass('active');
+            $(".mobile-menu").removeClass('active');
             toggleTween(tl);    //We add the function To reverse on click
         });
 
         $('nav .links li a').click(function () {       //Hide Menu On Link Click
-            $("nav").removeClass('active');
+            $(".mobile-menu").removeClass('active');
             toggleTween(tl);        //We add the function To reverse on click
         });
         //Close Active Menu On Click On Body
         $(document).click(function () {
-            if ($("nav").hasClass("active")) {
+            if ($(".mobile-menu").hasClass("active")) {
                 hideMenu.click();
             } 
         })
-        $("nav li,.hide-menu-btn i,.show-menu-btn").click(function (e) {
+        $(".mobile-menu li,.hide-menu-btn i,.show-menu-btn").click(function (e) {
             "use strict";
             e.stopPropagation();
         });
 
-    });
+});
 
 
 
@@ -120,14 +120,13 @@ const cursor = new CursorFx(document.querySelector('.cursor'));
     link.addEventListener('click', () => cursor.click() );
 });
 
+// Header Sticky 
 $(window).scroll( function ( ) {
-    // Header Sticky 
     if ( $(window).scrollTop( )  > $('header').innerHeight( ) ) {
         $('header').addClass('sticky');
     } else {
         $('header').removeClass('sticky');
     }
-    
     // Horizontal Scroll
     progress( );
 } )
@@ -141,7 +140,7 @@ tl
         rotation: 90,
         opacity: 0
     })
-    .staggerFrom('nav .links li', 1, {
+    .staggerFrom('.mobile-menu .links li', 1, {
         opacity:0,
         y:40,
         ease: Power3.easeInOut

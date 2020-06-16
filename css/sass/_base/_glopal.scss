@@ -6,8 +6,10 @@ html{
     margin: 0;
     padding: 0;
     font-family: $font-body;
-    cursor: none;
     overflow-x: hidden;
+    @media #{$minLarge} {
+      cursor: none;
+    }
 }
 *{
     box-sizing: border-box;
@@ -90,7 +92,9 @@ html{
   }
   /* Cursor */ 
   .cursor {
-    
+    @media #{$maxTablet} {
+      display: none;
+    }
     .cursor__inner {
       z-index: 9999;
       pointer-events: none;
