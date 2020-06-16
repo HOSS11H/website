@@ -1,20 +1,46 @@
 .skills{
-    padding: 100px 0;
+    padding: 100px 0 60px;
     .skills-group{
-        width: 50%;
-        margin: 0 auto;
+        @media #{$minTablet} {
+            width: 50%;
+            margin: 0 auto;
+        }
         .skill{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
+            cursor: pointer;
+            &:hover{
+                span{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
             img{
                 width: 50px;
                 height: 50px;
                 max-width: 100%;
             }
             span{
-
+                text-align: center;
+                background: rgba($mainColor, 0.5);
+                color: #fff;
+                padding: 6px;
+                border-radius: 8px;
+                opacity: 0;
+                transform: scale(0);
+                transform-origin: top;
+                transition: 0.3s ease-in-out;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: -5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 5px;
+                    background: #333;
+                }
             }
         }
     }

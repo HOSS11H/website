@@ -15,7 +15,7 @@ $(document).ready(function () {
             toggleTween(tl);    //We add the function To reverse on click
         });
 
-        $('nav .links li a').click(function () {       //Hide Menu On Link Click
+        $('.mobile-menu .links li a').click(function () {       //Hide Menu On Link Click
             $(".mobile-menu").removeClass('active');
             toggleTween(tl);        //We add the function To reverse on click
         });

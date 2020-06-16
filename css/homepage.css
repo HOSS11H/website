@@ -120,33 +120,38 @@ a:hover, a:focus {
 }
 
 .section-heading {
-  margin-bottom: 45px;
+  margin-bottom: 65px;
 }
 
-.section-heading .section-pre-title {
-  letter-spacing: 16px;
-  font-size: 18px;
-  color: #0099ff;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 767.98px) {
-  .section-heading .section-pre-title {
-    font-size: 16px;
+@media screen and (max-width: 991.98px) {
+  .section-heading {
+    text-align: center;
   }
 }
 
 .section-heading .section-title {
+  display: inline-block;
   font-size: 42px;
   color: #000;
   font-weight: bold;
+  position: relative;
+}
+
+.section-heading .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: rgba(0, 153, 255, 0.3);
 }
 
 @media screen and (max-width: 767.98px) {
   .section-heading .section-title {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -272,6 +277,7 @@ header .wrapper {
 
 header .wrapper .logo a {
   font-size: 26px;
+  text-transform: capitalize;
   color: #000;
 }
 
@@ -690,12 +696,14 @@ header .progress .bar {
 }
 
 .skills {
-  padding: 100px 0;
+  padding: 100px 0 60px;
 }
 
-.skills .skills-group {
-  width: 50%;
-  margin: 0 auto;
+@media screen and (min-width: 768px) {
+  .skills .skills-group {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .skills .skills-group .skill {
@@ -710,12 +718,45 @@ header .progress .bar {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.skills .skills-group .skill:hover span {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .skills .skills-group .skill img {
   width: 50px;
   height: 50px;
   max-width: 100%;
+}
+
+.skills .skills-group .skill span {
+  text-align: center;
+  background: rgba(0, 153, 255, 0.5);
+  color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.skills .skills-group .skill span::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 5px;
+  background: #333;
 }
 
 .btn {

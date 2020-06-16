@@ -65,24 +65,28 @@ html{
     font-weight: bold;
   }
   .section-heading{
-    margin-bottom: 45px;
-    .section-pre-title{
-      letter-spacing: 16px;
-      font-size: 18px;
-      color:$mainColor;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-bottom: 20px;
-      @media #{$maxSmall}{
-        font-size:16px
-      }
+    margin-bottom: 65px;
+    @media #{$maxTablet} {
+      text-align: center;
     }
     .section-title{
+      display: inline-block;
       font-size: 42px;
       color: #000;
       font-weight: bold;
+      position: relative;
+      &::after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 30%;
+          width: 100%;
+          transition: 0.3s ease-in-out;
+          background-color: rgba($mainColor,0.3) ;
+      }
       @media #{$maxSmall}{
-        font-size:32px
+        font-size:26px
       }
     }
   }

@@ -21,6 +21,7 @@ header{
         .logo{
             a{
                 font-size: 26px;
+                text-transform: capitalize;
                 //color: $mainColor;
                 color: #000;
             }
@@ -131,7 +132,6 @@ header{
                             transition: 0.3s ease-in-out;
                             background-color: rgba($mainColor,0.3) ;
                         }
-                        
                     }
                 }
             }
