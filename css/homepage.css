@@ -770,6 +770,12 @@ header .progress .bar {
 .works .showcases-container .swiper-button-next, .works .showcases-container .swiper-button-prev {
   color: #0099ff;
   outline: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.works .showcases-container .swiper-button-next:hover, .works .showcases-container .swiper-button-prev:hover {
+  color: #000;
 }
 
 .works .showcases-container .swiper-button-next:after, .works .showcases-container .swiper-button-prev:after {
