@@ -32,7 +32,12 @@ $(document).ready(function () {
 
 });
 
-
+// More Button 
+$('.more').on('click', function ( ) {
+    $("body, html").animate({
+        scrollTop: $($(this).data("scroll")).offset().top + 2
+    });
+})
 
 
 // Horizontal Scroll
@@ -129,6 +134,17 @@ $(window).scroll( function ( ) {
     }
     // Horizontal Scroll
     progress( );
+
+    // Sync the Divs
+    $("section").each(function () {
+        let windowHeight = $(window).scrollTop(),
+            sectionOffset = $(this).offset().top,
+            sectionId = $(this).attr("id");
+        if ( windowHeight > sectionOffset &&  windowHeight < sectionOffset + $(this).innerHeight() - 1 ) {
+            $("nav .links li a , .mobile-menu .links li a").removeClass("active");
+            $('nav .links li a[href="#' + sectionId + '"] , .mobile-menu .links li a[href="#' + sectionId + '"] ').addClass("active");
+        }
+    }); 
 } )
 
 
@@ -149,3 +165,46 @@ tl
 function toggleTween(tween) {
     tween.reversed( ) ?  tween.play( )  :  tween.reverse( );
 }   
+
+
+// Projects Slider
+var mySwiper = new Swiper ('.showcases', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    slidesPerView:1,
+    spaceBetween: 20,
+    breakpoints: {
+        // when window width is >= 768px
+        768: {
+            slidesPerView:2,
+            spaceBetween: 20
+        },
+        992: {
+            slidesPerView:3,
+            spaceBetween: 40
+        },
+    },
+    fadeEffect: {
+        crossFade: true,
+    },
+    centeredSlides: true,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : false,
+    },
+    effect: 'coverflow', 
+    grabCursor: true,
+});

@@ -1,0 +1,41 @@
+.contact{
+    .top{
+        svg{
+            vertical-align: middle;
+        }
+    }
+    .bottom{
+        padding-top: 30px;
+        padding-bottom: 80px;
+        background-color: $mainColor;
+        color: #fff;
+        text-align: center;
+        @media #{$minLarge} {
+            padding-top: 0;
+        }
+        .heading{
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            @media #{$maxSmall} {
+                font-size: 26px;
+            }
+        }
+        .social{
+            ul{
+                li{
+                    display: inline-block;
+                    a{
+                        padding:  0 10px ; 
+                        color: #fff;
+                        font-size: 18px;
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

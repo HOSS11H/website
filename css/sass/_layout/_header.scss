@@ -117,7 +117,7 @@ header{
                         color: #000;
                         text-transform: capitalize;
                         position: relative;
-                        &:hover{
+                        &:hover ,&.active{
                             &::after{
                                 width: 100%;
                             }
@@ -171,7 +171,7 @@ header{
                         color: #fff;
                         transition: 0.5s ease-in-out;
                         position: relative;
-                    &:hover{
+                    &:hover, &.active{
                         color: $mainColor;
                         &::after{
                             width:100%

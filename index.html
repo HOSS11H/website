@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/homepage.css">
     <title>Hossam Said</title>
 </head>
@@ -22,16 +23,18 @@
                 </div>
                 <nav>
                     <ul class="list-unstyled links">
-                        <li><a href="#about" data-hover="">about me</a></li>
-                        <li><a href="#skills" data-hover="">skills</a></li>
-                        <li><a href="#works" data-hover="">works</a></li>
+                        <li><a href="#about" data-scroll='#about' data-hover="">about me</a></li>
+                        <li><a href="#skills" data-scroll='#skills' data-hover="">skills</a></li>
+                        <li><a href="#works" data-scroll='#works' data-hover="">works</a></li>
+                        <li><a href="#contact" data-scroll='#works' data-hover="">contact me</a></li>
                     </ul>
                 </nav>
                 <div class='mobile-menu'>
                     <ul class="list-unstyled links">
-                        <li><a href="#about" data-hover="">about me</a></li>
-                        <li><a href="#skills" data-hover="">skills</a></li>
-                        <li><a href="#works" data-hover="">works</a></li>
+                        <li><a href="#about" data-scroll='#about' data-hover="">about me</a></li>
+                        <li><a href="#skills" data-scroll='#skills' data-hover="">skills</a></li>
+                        <li><a href="#works" data-scroll='#works' data-hover="">works</a></li>
+                        <li><a href="#contact" data-scroll='#works' data-hover="">contact me</a></li>
                     </ul>
                     <div class="hide-menu-btn" data-hover="">
                         <i class="fas fa-times"></i>
@@ -44,7 +47,7 @@
         </div>
     </header>
     <main>
-        <div id='intro' class="intro">
+        <section id='intro' class="intro">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6">
@@ -54,7 +57,7 @@
                             <p class='desc'>
                                 <span>front-end developer.</span>passionate about building exceptional, high-quality, performant websites and webapps. 
                             </p>
-                            <a href="#" class="btn" data-hover="">my resume</a>
+                            <a href="./resume.pdf" target='_blank' class="btn" data-hover="">my resume</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -64,9 +67,9 @@
                     </div>
                 </div>
             </div>
-            <div class="more" data-hover=""></div>
-        </div>
-        <div id='about' class="about">
+            <div class="more" data-hover="" data-scroll='#about'></div>
+        </section>
+        <section id='about' class="about">
             <div class="top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,96L40,90.7C80,85,160,75,240,85.3C320,96,400,128,480,154.7C560,181,640,203,720,213.3C800,224,880,224,960,192C1040,160,1120,96,1200,74.7C1280,53,1360,75,1400,85.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
             </div>
@@ -94,9 +97,9 @@
             <div class="bottom">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,64L48,85.3C96,107,192,149,288,165.3C384,181,480,171,576,176C672,181,768,203,864,229.3C960,256,1056,288,1152,272C1248,256,1344,192,1392,160L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
             </div>
-        </div>
+        </section>
 
-        <div id="skills" class="skills" >
+        <section id="skills" class="skills" >
             <div class="container">
                 <div class='section-heading'>
                     <h3 class='section-title'>Tools &amp; technologies</h3>
@@ -170,8 +173,171 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         
+        <section id="works" class="works" >
+            <div class="container">
+                <div class='section-heading'>
+                    <h3 class='section-title'>projects done</h3>
+                </div>
+            </div>
+            <div class="showcases-container ">
+                <div class="container">
+                    <div class="showcases swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/burger-app.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>Your burger app</h5>
+                                        <a href="https://react-burger-app-8e0f4.web.app/" class='showcase-link'>
+                                            <i class="fas fa-desktop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/7oroof.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>7oroof landing page</h5>
+                                        <a href="http://www.7oroof.com/" class='showcase-link'>
+                                            <i class="fas fa-desktop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/shipping-company.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>shipping website</h5>
+                                        <a href="https://hoss11h.github.io/Delivery-Company-template/" class='showcase-link'>
+                                            <i class="fas fa-desktop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/leland.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>leland landing page</h5>
+                                        <a href="https://preview.themeforest.net/item/leland-isometric-business-html-landing-page/full_screen_preview/26240112" class='showcase-link'>
+                                            <i class="fas fa-desktop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/medical-website.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>2 lang medical website</h5>
+                                        <a href="https://hoss11h.github.io/Medical-Template-2-Languages/index.html" class='showcase-link'>
+                                            <i class="fas fa-desktop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/hairy.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>hairy theme</h5>
+                                        <a href="https://hoss11h.github.io/Hairy/. " class='showcase-link'>
+                                            <i class="fas fa-desktop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/astred.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>astred theme</h5>
+                                        <a href="#" class='showcase-link'>
+                                            <i class="fas fa-code"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="showcase">
+                                    <div class="showcase-img">
+                                        <img src="./images/projects/thetis.png" alt="">
+                                    </div>
+                                    <div class="showcase-content">
+                                        <h5>thetis theme</h5>
+                                        <a href="#" class='showcase-link'>
+                                            <i class="fas fa-code"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+        </section>
+        <section id="contact" class='contact'>
+            <div class="top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,96L20,90.7C40,85,80,75,120,80C160,85,200,107,240,128C280,149,320,171,360,165.3C400,160,440,128,480,122.7C520,117,560,139,600,133.3C640,128,680,96,720,90.7C760,85,800,107,840,122.7C880,139,920,149,960,160C1000,171,1040,181,1080,170.7C1120,160,1160,128,1200,144C1240,160,1280,224,1320,229.3C1360,235,1400,181,1420,154.7L1440,128L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path></svg>
+            </div>
+            <div class="bottom">
+                <div class="container">
+                    <h3 class='heading'>feel free to contact me anytime</h3>
+                    <div class="social">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href='' data-hover="">
+                                    <i  class='fab fa-linkedin-in'> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='' data-hover="">
+                                    <i  class='fab fa-facebook-f'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='mailto:' data-hover="">
+                                    <i  class='fab fa-google'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='' data-hover="">
+                                    <i  class='fab fa-github'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p>designed &amp; developed with <i class='fas fa-heart'></i>  by me &copy; 2020</p>
+            </div>
+        </footer>
     </main>
     <div class="cursor">
         <div class="cursor__inner cursor__inner--circle"></div>
@@ -183,6 +349,7 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

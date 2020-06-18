@@ -408,7 +408,7 @@ header .wrapper nav .links li a {
   position: relative;
 }
 
-header .wrapper nav .links li a:hover::after {
+header .wrapper nav .links li a:hover::after, header .wrapper nav .links li a.active::after {
   width: 100%;
 }
 
@@ -479,11 +479,11 @@ header .wrapper .mobile-menu .links li a {
   position: relative;
 }
 
-header .wrapper .mobile-menu .links li a:hover {
+header .wrapper .mobile-menu .links li a:hover, header .wrapper .mobile-menu .links li a.active {
   color: #0099ff;
 }
 
-header .wrapper .mobile-menu .links li a:hover::after {
+header .wrapper .mobile-menu .links li a:hover::after, header .wrapper .mobile-menu .links li a.active::after {
   width: 100%;
 }
 
@@ -625,7 +625,7 @@ header .progress .bar {
   width: 15px;
   height: 15px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   border-color: transparent #0099ff #0099ff transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -696,7 +696,7 @@ header .progress .bar {
 }
 
 .skills {
-  padding: 100px 0 60px;
+  padding: 80px 0 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -759,6 +759,139 @@ header .progress .bar {
   background: #333;
 }
 
+.works {
+  padding: 10px 0 50px;
+}
+
+.works .showcases-container {
+  position: relative;
+}
+
+.works .showcases-container .swiper-button-next, .works .showcases-container .swiper-button-prev {
+  color: #0099ff;
+  outline: none;
+}
+
+.works .showcases-container .swiper-button-next, .works .showcases-container .swiper-container-rtl .swiper-button-prev {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .works .showcases-container .swiper-button-next, .works .showcases-container .swiper-container-rtl .swiper-button-prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 3%;
+  }
+}
+
+.works .showcases-container .swiper-button-prev, .works .showcases-container .swiper-container-rtl .swiper-button-next {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .works .showcases-container .swiper-button-prev, .works .showcases-container .swiper-container-rtl .swiper-button-next {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 3%;
+  }
+}
+
+.works .showcases-container .showcases {
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 767.98px) {
+  .works .showcases-container .showcases {
+    padding: 30px;
+  }
+}
+
+.works .showcases-container .showcases .showcase {
+  max-width: 370px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-box-shadow: 0px 2px 3px 2px #0000003d;
+          box-shadow: 0px 2px 3px 2px #0000003d;
+}
+
+@media screen and (max-width: 767.98px) {
+  .works .showcases-container .showcases .showcase {
+    padding: 5%;
+  }
+}
+
+.works .showcases-container .showcases .showcase .showcase-img img {
+  max-width: 100%;
+}
+
+.works .showcases-container .showcases .showcase .showcase-content {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.works .showcases-container .showcases .showcase .showcase-content h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.works .showcases-container .showcases .showcase .showcase-content .showcase-link {
+  color: #000;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.works .showcases-container .showcases .showcase .showcase-content .showcase-link:hover {
+  color: #0099ff;
+}
+
+.contact .top svg {
+  vertical-align: middle;
+}
+
+.contact .bottom {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background-color: #0099ff;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .contact .bottom {
+    padding-top: 0;
+  }
+}
+
+.contact .bottom .heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .contact .bottom .heading {
+    font-size: 26px;
+  }
+}
+
+.contact .bottom .social ul li {
+  display: inline-block;
+}
+
+.contact .bottom .social ul li a {
+  padding: 0 10px;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .bottom .social ul li a:hover {
+  color: #000;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,5 +924,22 @@ header .progress .bar {
 /*Main*/
 main {
   background-color: #fff;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #808080db;
+  text-transform: capitalize;
+}
+
+footer p i {
+  color: red;
 }
 /*# sourceMappingURL=homepage.css.map */
