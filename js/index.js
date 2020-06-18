@@ -181,17 +181,17 @@ var mySwiper = new Swiper ('.showcases', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    slidesPerView:1,
-    spaceBetween: 20,
+    slidesPerView:1.2,
+    spaceBetween: 30,
     breakpoints: {
         // when window width is >= 768px
         768: {
             slidesPerView:2,
-            spaceBetween: 20
+            spaceBetween: 30
         },
         992: {
             slidesPerView:3,
-            spaceBetween: 40
+            spaceBetween: 50
         },
     },
     fadeEffect: {
@@ -201,7 +201,7 @@ var mySwiper = new Swiper ('.showcases', {
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
-        depth: 100,
+        depth: 80,
         modifier: 1,
         slideShadows : false,
     },

@@ -5,19 +5,26 @@
         .swiper-button-next, .swiper-button-prev{
             color: $mainColor;
             outline: none;
+            &:after{
+                font-size: 30px;
+            }
         }
         .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
             display: none;
             @media #{$minLarge} {
                 display: flex;
-                right: 3%;
+                top: auto;
+                bottom:-60px;
+                right: 45%;
             }
         }
         .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
             display: none;
             @media #{$minLarge} {
                 display: flex;
-                right: 3%;
+                top:auto;
+                bottom: -60px;
+                left: 45%;
             }
         }
         .showcases{
@@ -45,14 +52,11 @@
                         font-size: 18px;
                         margin-bottom: 15px;
                     }
-                    .showcase-link{
+                    i{
                         color: #000;
                         transition: 0.3s ease-in-out;
                         &:hover{
                             color: $mainColor;
-                        }
-                        i{
-    
                         }
                     }
                 }

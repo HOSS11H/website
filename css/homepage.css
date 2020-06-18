@@ -772,6 +772,10 @@ header .progress .bar {
   outline: none;
 }
 
+.works .showcases-container .swiper-button-next:after, .works .showcases-container .swiper-button-prev:after {
+  font-size: 30px;
+}
+
 .works .showcases-container .swiper-button-next, .works .showcases-container .swiper-container-rtl .swiper-button-prev {
   display: none;
 }
@@ -781,7 +785,9 @@ header .progress .bar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    right: 3%;
+    top: auto;
+    bottom: -60px;
+    right: 45%;
   }
 }
 
@@ -794,7 +800,9 @@ header .progress .bar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    right: 3%;
+    top: auto;
+    bottom: -60px;
+    left: 45%;
   }
 }
 
@@ -836,13 +844,13 @@ header .progress .bar {
   margin-bottom: 15px;
 }
 
-.works .showcases-container .showcases .showcase .showcase-content .showcase-link {
+.works .showcases-container .showcases .showcase .showcase-content i {
   color: #000;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-.works .showcases-container .showcases .showcase .showcase-content .showcase-link:hover {
+.works .showcases-container .showcases .showcase .showcase-content i:hover {
   color: #0099ff;
 }
 
