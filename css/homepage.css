@@ -852,16 +852,10 @@ header .progress .bar {
 
 .contact .bottom {
   padding-top: 30px;
-  padding-bottom: 80px;
+  padding-bottom: 130px;
   background-color: #0099ff;
   color: #fff;
   text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .contact .bottom {
-    padding-top: 0;
-  }
 }
 
 .contact .bottom .heading {
@@ -927,7 +921,7 @@ main {
 }
 
 footer {
-  padding: 20px 0;
+  padding: 15px 0;
   text-align: center;
 }
 

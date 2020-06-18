@@ -6,13 +6,11 @@
     }
     .bottom{
         padding-top: 30px;
-        padding-bottom: 80px;
+        padding-bottom: 130px;
         background-color: $mainColor;
         color: #fff;
         text-align: center;
-        @media #{$minLarge} {
-            padding-top: 0;
-        }
+        
         .heading{
             font-size: 32px;
             font-weight: 600;

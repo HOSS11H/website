@@ -208,3 +208,6 @@ var mySwiper = new Swiper ('.showcases', {
     effect: 'coverflow', 
     grabCursor: true,
 });
+
+// WOW JS
+new WOW().init();
