@@ -136,7 +136,7 @@ $(window).scroll( function ( ) {
     progress( );
 
     // Sync the Divs
-    $("section").each(function () {
+    /* $("section").each(function () {
         let windowHeight = $(window).scrollTop(),
             sectionOffset = $(this).offset().top,
             sectionId = $(this).attr("id");
@@ -144,7 +144,7 @@ $(window).scroll( function ( ) {
             $("nav .links li a , .mobile-menu .links li a").removeClass("active");
             $('nav .links li a[href="#' + sectionId + '"] , .mobile-menu .links li a[href="#' + sectionId + '"] ').addClass("active");
         }
-    }); 
+    });  */
 } )
 
 
