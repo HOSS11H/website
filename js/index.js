@@ -35,7 +35,7 @@ $(document).ready(function () {
 // More Button 
 $('.more').on('click', function ( ) {
     $("body, html").animate({
-        scrollTop: $($(this).data("scroll")).offset().top + 2
+        scrollTop: $($(this).data("scroll")).offset().top + 10
     });
 })
 
