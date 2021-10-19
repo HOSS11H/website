@@ -39,7 +39,8 @@
             .showcase{
                 max-width: 370px;
                 margin: 0 auto;
-                padding: 20px;            
+                padding: 20px;  
+                background-color: #fff;
                 box-shadow: 0px 2px 3px 2px #0000003d;
                     @media #{$maxSmall} {
                         padding:  5%;
