@@ -23,13 +23,23 @@
             margin-bottom: 0;
         }
         .pre-name{
+            display: flex;
+            align-items: center;
             font-size: 26px;
             line-height: 1.5;
             font-weight: 400;
             color: $mainColor;
-            //color: #808080db;
-            //font-weight: 600;
             text-transform: capitalize;
+            span {
+                animation: wave 1.8s ease-in-out infinite;
+                transform-origin: 70% 70%;
+                img {
+                    display: inline-block;;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 10px;
+                }
+            }
         }
         .name{
             font-size: 47px;
@@ -78,5 +88,27 @@
         cursor: pointer;
         animation: upDown 2s infinite ease-in-out;
     }
-    
+}
+@include keyFrame(wave) {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+    }
+    20% {
+        transform: rotate(12deg);
+    }
+    30% {
+        transform: rotate(-10deg);
+    }
+    40% {
+        transform: rotate(9deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
