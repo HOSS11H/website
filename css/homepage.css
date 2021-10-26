@@ -345,10 +345,6 @@ header .wrapper nav {
   align-items: center;
 }
 
-header .wrapper nav .links {
-  margin-right: 30px;
-}
-
 header .wrapper nav .links li {
   display: inline-block;
   margin-right: 30px;
@@ -703,6 +699,7 @@ header .progress .bar {
   transform: scale(0);
   transform-origin: top;
   transition: 0.3s ease-in-out;
+  text-transform: capitalize;
 }
 
 .skills .skills-group .skill span::after {
